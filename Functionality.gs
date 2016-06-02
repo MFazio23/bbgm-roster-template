@@ -90,7 +90,7 @@ function createJSON() {
     fileName += ".json";
   }
   
-  DocsList.createFile(fileName, JSON.stringify(json));
+  DriveApp.createFile(fileName, JSON.stringify(json));
   
   ui.alert("File saved to drive: " + fileName);
   

@@ -13,12 +13,12 @@ function getOAuthToken() {
 }
 
 function filePickerCallback(id, name) {  
-  var file = DocsList.getFileById(id);
+  var file = DriveApp.getFileById(id);
   var ui = SpreadsheetApp.getUi();
   
   ui.alert("Loading file: " + name + "\nPlease leave your spreadsheet active and do not switch tabs while the script is running.");
   
-  var roster = JSON.parse(file.getContentAsString());
+  var roster = JSON.parse(file.getBlob().getDataAsString());
   
   Logger.log("Loading teams...");
   loadTeams(roster);

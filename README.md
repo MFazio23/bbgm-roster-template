@@ -1,1 +1,1 @@
-Spreadsheet Link: http://goo.gl/PthbNF
+Spreadsheet Link: http://l.mfazio.me/bbgm-roster-spreadsheet

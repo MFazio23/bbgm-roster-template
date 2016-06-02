@@ -10,9 +10,11 @@
   /**
    * Loads the Google Picker API.
    */
-  gapi.load('picker', {'callback': function() {
-    pickerApiLoaded = true;
-  }});
+  function onApiLoad() {
+   gapi.load('picker', {'callback': function() {
+     pickerApiLoaded = true;
+   }});
+  }
 
   /**
    * Gets the user's OAuth 2.0 access token from the server-side script so that
@@ -47,6 +49,7 @@
           .setOAuthToken(token)
           .setDeveloperKey(DEVELOPER_KEY)
           .setCallback(pickerCallback)
+          .setOrigin(google.script.host.origin)
           // Instruct Picker to fill the dialog, minus 2 pixels for the border.
           .setSize(DIALOG_DIMENSIONS.width - 2,
               DIALOG_DIMENSIONS.height - 2)
@@ -97,3 +100,5 @@
   <button onclick='getOAuthToken()'>Select a file</button>
   <p id='result'></p>
 </div>
+
+<script src="https://apis.google.com/js/api.js?onload=onApiLoad"></script>
