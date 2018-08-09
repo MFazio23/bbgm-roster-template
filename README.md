@@ -1,1 +1,1 @@
-Spreadsheet Link: http://l.mfazio.me/bbgm-roster-spreadsheet
+Spreadsheet Link: http://l.faziodev.org/bbgm-custom-rosters
